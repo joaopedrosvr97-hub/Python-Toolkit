@@ -1,9 +1,13 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "canivete_suico_python_toolkit"
+name = "python-toolkit"
 version = "0.1.0"
-description = "Toolkit Python multifuncional"
+description = "Toolkit em Python"
+readme = "README.md"
 requires-python = ">=3.8"
+authors = [
+  { name="João Pedro" }
+]
