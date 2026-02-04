@@ -18,7 +18,7 @@ A maioria das ações deste toolkit (como limpeza de sistema, diagnóstico SFC/D
 1. Clonar o Repositório
 Bash
 
-git clone https://github.com/joaopedrosvr97-hub/Canivete-Sui-o-Python-Toolkit.git
+git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
 cd canivete-suico-toolkit
 2. Instalar Dependências (Opcional)
 A única dependência externa real para rodar é o pyinstaller (se quiser gerar o .exe). Para rodar o código diretamente, não há módulos de terceiros:
