@@ -67,7 +67,6 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 
 ### Procedimento de Instalação (Windows/Linux)
 
-```bash
 # 1. Clonagem do Repositório
 git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
 # 2. Navegação para o Diretório de Build
@@ -82,7 +81,7 @@ canivete-gui
 
 📂 Arquitetura do Sistema (Project Blueprint)
 
-A estrutura segue o padrão **src-layout**, garantindo isolamento entre o core da aplicação e os scripts de distribuição.
+A estrutura segue o padrão 'src-layout', garantindo isolamento entre o core da aplicação e os scripts de distribuição.
 
 ```text
 📦 Python-Toolkit
