@@ -59,12 +59,22 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 
 ---
 
-## 🚀 Deployment & Quick Start
+## 🛠️ Stack Técnica e Capacidades
 
-### Requisitos de Ambiente
-* Terminal com **Privilégios Elevados** (Run as Administrator / Sudo).
-* Interpretador Python 3.9 ou superior instalado.
+* **Core Engine:** Python 3.9+ com arquitetura modular.
+* **GUI Framework:** `CustomTkinter` para UI/UX acelerada por hardware.
+* **System Integration:** Hooks nativos para Win32 API e subprocessos Unix.
+* **Network Intelligence:** Monitoramento de I/O em tempo real e scan de sub-redes.
 
+---
+
+## 🆕 Release Notes - v0.4.0 (GUI Milestone)
+
+* **Modularization:** Transição completa para o padrão `src-layout` (PEP 517/518).
+* **Maintenance Suite:** Implementação de triggers para integridade de sistema (SFC, DISM).
+* **Print Services:** Módulo especializado para gestão de Spooler e patches de registro.
+* **CI/CD Ready:** Integração com GitHub Actions para validação automatizada de pacotes.
+---
 ### Procedimento de Instalação (Windows/Linux)
 
 * git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git

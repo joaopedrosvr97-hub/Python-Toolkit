@@ -1,6 +1,4 @@
-# ====================================
-# 1. ARQUIVOS DE COMPILAÇÃO E DISTRIBUIÇÃO (PyInstaller)
-# ====================================
+
 # Pastas geradas pelo PyInstaller:
 dist/
 build/
@@ -12,51 +10,70 @@ build/
 *.so
 *.dylib
 
-# ====================================
-# 2. CACHE E AMBIENTE PYTHON
-# ====================================
+
+
 # Cache de bytecode (criado ao rodar o Python):
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-# Ambientes virtuais (muito grandes e não devem ser versionados):
+# Ambientes virtuais 
 venv/
 .venv/
 env/
+ENV/
+
+# Bibliotecas instaladas via pip no modo editável
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
 # ====================================
-# 3. METADADOS, LOGS E SENHAS (Dados Sensíveis)
+# 3. METADADOS, LOGS E SENHAS
 # ====================================
-# Logs de testes, diagnóstico ou erro (podem conter caminhos do sistema ou dados):
+# Logs de testes, diagnóstico ou erro:
 *.log
 *.err
 *.out
 logs/
-*.egg-info/
-dist/
-build/
 
-
-# Arquivos de configuração/variáveis de ambiente que contêm chaves ou senhas:
+# Arquivos de configuração/variáveis de ambiente :
 .env
 .flaskenv
 config.local.py
 settings_local.py
 secrets.py
 keys.json
+credentials*
 
-# Arquivos de dados temporários e de teste:
-# Se seus testes criam arquivos de saída, inclua-os aqui:
 test_output/
 *.tmp
 *.temp
 test_results.json
 
-# ====================================
-# 4. CONFIGURAÇÕES DE EDITOR (VS Code e Outros)
-# ====================================
-# Configurações específicas do usuário/ambiente do VS Code:
+# Configurações específicas do VS Code:
 .vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Arquivos do sistema (Windows/Mac)
+Thumbs.db
+desktop.ini
+.DS_Store
 
 # Configurações do Sublime Text:
 *.sublime-workspace
+*.sublime-project
+# Resultados de diagnósticos e logs
+diagnostico_canivete.html
+*.html
+*.log
+*.report
+
+# Pastas de build 
+build/
+dist/
+*.spec
