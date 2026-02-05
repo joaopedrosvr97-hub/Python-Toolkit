@@ -1,10 +1,10 @@
 # Changelog do Canivete Suíço Toolkit
 
-## [1.0.0] - 2025-12-02 (Versão Inicial)
+## [0.4.0] - 2026-02-04 (Versão Atual)
 
 ### Adicionado
 
-* Implementação inicial da aplicação GUI (Tkinter) para administração de sistemas.
+* Implementação atual da aplicação GUI (Tkinter) para administração de sistemas.
 * Funcionalidades de Rede (Ping, Flush DNS, Reset).
 * Funcionalidades de Impressão (Spooler, Painel, Correções de Registro).
 * Funcionalidades de Diagnóstico e Reparo de Sistema (SFC, DISM, CHKDSK).

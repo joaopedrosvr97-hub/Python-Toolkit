@@ -1,84 +1,90 @@
-Ferramenta completa de diagnóstico, testes e análise de rede — tudo em um único script.
+🔪 Canivete Suíço - Network Toolkit (v0.4.0)
+<p align="center"> <img src="https://img.shields.io/badge/Status-Ativo-32CD32?style=for-the-badge"> <img src="https://img.shields.io/badge/Versão-0.4.0-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python"> <img src="https://img.shields.io/badge/Plataforma-Windows%20%7C%20Linux-lightgrey?style=for-the-badge"> <img src="https://img.shields.io/badge/Licença-MIT-purple?style=for-the-badge"> </p>
 
-<p align="center"> <img src="https://img.shields.io/badge/Status-Ativo-32CD32?style=for-the-badge"> <img src="https://img.shields.io/badge/Versão-1.0.0-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python"> <img src="https://img.shields.io/badge/Plataforma-Windows%20%7C%20Linux-lightgrey?style=for-the-badge"> <img src="https://img.shields.io/badge/Licença-MIT-purple?style=for-the-badge"> </p>
+Uma ferramenta de administração de sistemas e redes multiplataforma, desenvolvida em Python com a moderna interface CustomTkinter. O projeto centraliza funções essenciais de diagnóstico de rede, manutenção de sistema e segurança em uma interface intuitiva e profissional.
 
-🔪 Canivete Suíço - PToolKit (GUI)
-Uma ferramenta de administração de sistemas multi-plataforma e open source, desenvolvida em Python/HTML com interface gráfica (Tkinter), que centraliza funções essenciais de diagnóstico, manutenção e segurança. Ideal para técnicos e administradores que precisam automatizar tarefas repetitivas.
+⚠️ Requisitos e Privilégios
+Python 3.9 ou superior.
 
-⚠️ Aviso de Segurança e Requisitos
-Requisitos
-Python 3.x (Recomendado: 3.8 ou superior).
+Privilégios de Administrador: A maioria das ações (SFC, DISM, Spooler, Reset de Rede) exige execução como Administrador (Windows) ou Root (Linux).
 
-Módulos: tkinter, shutil (inclusos no Python padrão) e pyinstaller (apenas para gerar o executável).
+🚀 Como Instalar e Rodar
+Agora o projeto utiliza o padrão de empacotamento moderno do Python.
 
-Execução e Privilégios
-A maioria das ações deste toolkit (como limpeza de sistema, diagnóstico SFC/DISM e reset de rede) requer privilégios de Administrador (Windows) ou Root (Linux/macOS). O aplicativo solicitará a confirmação para tentar elevar o privilégio, se necessário.
-
-🚀 Como Rodar
 1. Clonar o Repositório
 Bash
 
+HEAD
 git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
 cd canivete-suico-toolkit
 2. Instalar Dependências (Opcional)
 A única dependência externa real para rodar é o pyinstaller (se quiser gerar o .exe). Para rodar o código diretamente, não há módulos de terceiros:
+=======
+git clone https://github.com/joaopedrosvr97-hub/Canivete-Sui-o-Python-Toolkit.git
+cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
+2. Instalar em Modo Editável
+Isso instalará automaticamente todas as dependências necessárias (customtkinter, psutil):
+(feat: upgrade to v0.4.0 - integrate maintenance tools and modern gui)
 
 Bash
 
-# Apenas se você planeja criar o executável:
-pip install pyinstaller
+pip install -e .
 3. Iniciar a Aplicação
-Execute o arquivo principal:
+Você pode iniciar a interface gráfica diretamente pelo comando registrado no seu sistema:
 
 Bash
 
-python canivete.py
-🛠️ Módulos e Funcionalidades Principais
-O toolkit é dividido em seções para fácil navegação e automação de tarefas:
+canivete-gui
+Ou via módulo: python -m canivete.gui
 
-⚙️ Sistema e Diagnóstico
-SFC / DISM: Reparos de arquivos de sistema e imagem do Windows.
+🛠️ Funcionalidades Integradas (v0.4.0)
+🌐 Redes e Tráfego
+Network Scanner: Varredura de sub-redes (CIDR) para identificar hosts ativos.
 
-CHKDSK: Varredura de integridade do disco.
+Monitor de Tráfego: Visualização em tempo real de Upload/Download (KB/s).
 
-Backup do Registro: Cria cópias de segurança de chaves críticas do Registro do Windows.
+Manutenção de Rede: Flush DNS, Reset de Winsock, IP Release/Renew.
 
-Relatório de Desempenho: Inicia o utilitário Perfmon no Windows.
+⚙️ Manutenção de Sistema
+Reparos Críticos: Atalhos para SFC /Scannow e DISM Restore Health.
 
-🌐 Rede
-Flush DNS: Limpa o cache DNS para resolver problemas de conectividade.
+Limpeza Automática: Exclusão de arquivos temporários e caches do Windows Update.
 
-Reset de Rede: Executa comandos como netsh winsock reset e netsh int ip reset.
+Otimização: Ativação de perfis de alto desempenho via powercfg.
 
-Coleta de Informações: Captura ipconfig /all, arp -a e rotas.
+🖨️ Suporte a Impressoras
+Fix PrintNightmare: Correções de registro para erros de compartilhamento (RPC).
 
-Ping: Ferramenta de teste de conectividade rápida.
+Gestão de Spooler: Reinício rápido do serviço de impressão.
 
-🧹 Limpeza e Otimização
-Limpar Temporários: Exclui arquivos temporários do sistema (%TEMP%, C:\Windows\Temp) de forma segura, usando lógica Python (para Unix) ou PowerShell (para Windows).
+📈 Visualização de Dados
+Tabelas Dinâmicas: Lista de processos e conexões de rede (netstat) exibidas em grades organizadas.
 
-Otimização de Energia: Aplica perfis de alto desempenho e desativa suspensão.
+Console Integrado: Saída de texto em tempo real com suporte a grandes volumes de dados.
 
-Desativar Telemetria/Apps: Aplica correções de registro e serviço para limitar dados e desativar recursos indesejados no Windows.
+📂 Estrutura do Projeto
+Plaintext
 
-🖨️ Impressão e Spooler
-Reiniciar Spooler: Resolve a maioria dos problemas de fila de impressão.
-
-Reparos de Registro: Aplica correções conhecidas de registro relacionadas a problemas de segurança e acesso de impressora.
-
-📈 Visualização Avançada de Saída
-Para lidar com a grande quantidade de dados gerados por comandos de sistema (tasklist, netstat, sfc):
-
-Visualizador Tabular: Se a saída se assemelha a dados de coluna (ex: Lista de Processos), é exibida em uma tabela (ttk.Treeview) para facilitar a leitura.
-
-Visualizador de Terminal: Para logs muito longos (> 20.000 caracteres), o resultado é movido para uma janela separada com funções de busca (Ctrl + F) para melhor análise.
-
+src/canivete/
+├── core/     # Lógica de rede, sistema e tráfego
+├── gui.py    # Interface gráfica (CustomTkinter)
+├── cli.py    # Interface de linha de comando
+└── __main__.py
 🤝 Contribuição
-Este projeto é open source e aceita contribuições.
+Faça um Fork do projeto.
 
-Para reportar bugs ou sugerir funcionalidades, use a seção Issues.
+Crie uma Branch para sua feature (git checkout -b feature/NovaFeature).
 
-Para submeter código, siga as diretrizes em CONTRIBUTING.md.
+Dê um Commit nas suas mudanças (git commit -m 'feat: Adiciona nova funcionalidade').
+
+Faça o Push da Branch (git push origin feature/NovaFeature).
+
+Abra um Pull Request.
 
 ⚖️ Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Dicas para o Commit Final:
+Verifique o Link do Repositório: No README acima, substitua os links se o nome da pasta no GitHub for diferente.
+
+Conventional Commits: Ao subir esse README junto com as outras mudanças, use: git commit -m "docs: update README to v0.4.0 and reflect new project structure"

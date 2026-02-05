@@ -1,0 +1,9 @@
+"""
+Canivete Suíço Network Toolkit
+"""
+
+__version__ = "0.4.0"
+
+from .cli import main
+
+__all__ = ["main", "__version__"]

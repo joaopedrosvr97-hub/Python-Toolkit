@@ -32,6 +32,10 @@ env/
 *.err
 *.out
 logs/
+*.egg-info/
+dist/
+build/
+
 
 # Arquivos de configuração/variáveis de ambiente que contêm chaves ou senhas:
 .env
