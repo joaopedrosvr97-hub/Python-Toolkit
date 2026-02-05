@@ -72,8 +72,9 @@ git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
 ---
 3. Navegação para o Diretório de Build
 4. Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
-5. cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
-6. Instalação do Pacote em Modo Editável (Developer Mode)
+---
+6. cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
+7. Instalação do Pacote em Modo Editável (Developer Mode)
 pip install -e .
 
 # 4. Inicialização do Binário
