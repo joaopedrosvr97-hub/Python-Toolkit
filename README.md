@@ -76,10 +76,9 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 (canivete-gui) 
 
 # 📂 Arquitetura do Sistema (Project Blueprint)
-
+```bash
 A estrutura segue o padrão 'src-layout', garantindo isolamento entre o core da aplicação e os scripts de distribuição.
 
-```text
 📦 Python-Toolkit
  ┣ 📂 .github/workflows      # Pipelines de CI/CD (Automation)
  ┣ 📂 docs/                  # Documentação técnica estendida
