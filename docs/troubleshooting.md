@@ -1,21 +1,13 @@
-# 🛠️ Troubleshooting – Solução de Problemas
+# 🛠️ Troubleshooting – Solução de Problemas (v0.4.0)
 
-Este documento reúne os principais erros que podem ocorrer ao utilizar o **Canivete Suíço – Network Toolkit**, junto de suas respectivas causas e soluções.
-
----
-
-# ❗ 1. Erros de Execução
+Este documento centraliza as falhas comuns, diagnósticos e resoluções para garantir a estabilidade do **Canivete Suíço – Network Toolkit**.
 
 ---
 
-## 🔹 Erro: *"can't open file 'src/...': No such file or directory"*
+## ❗ 1. Erros de Inicialização e Caminhos
 
-**Causa:**  
-Você executou o comando fora da pasta do projeto.
-
-**Solução:**  
-Entre na pasta correta:
-
-```sh
-cd Canivete-Suico-Network-Toolkit
-python src/canivete.py
+### 🔹 Erro: *"ModuleNotFoundError: No module named 'canivete'"*
+**Causa:** O Python não consegue localizar o pacote dentro da pasta `src` ou o pacote não foi instalado no ambiente atual.
+**Solução:** Certifique-se de que você está na pasta que contém o arquivo `pyproject.toml` e execute:
+```bash
+pip install -e .

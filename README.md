@@ -1,73 +1,150 @@
-
-</p>
-
 # 🔪 Canivete Suíço - Network Toolkit (v0.4.0)
 
 <p align="center"> 
-  <img src="https://img.shields.io/badge/Status-Ativo-32CD32?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/Versão-0.4.0-blue?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/Status-Stable-32CD32?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/Release-v0.4.0-blue?style=for-the-badge"> 
   <img src="https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python"> 
-  <img src="https://img.shields.io/badge/Plataforma-Windows%20%7C%20Linux-lightgrey?style=for-the-badge"> 
-  <img src="https://img.shields.io/badge/Licença-MIT-purple?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge"> 
 </p>
 
-O **Canivete Suíço** é uma suíte unificada de diagnóstico e manutenção para técnicos e sysadmins. Com uma interface moderna em **CustomTkinter**, o projeto automatiza desde a limpeza de cache DNS até reparos profundos de sistema (SFC/DISM).
+O **Canivete Suíço** é uma solução modular de alto desempenho projetada para engenheiros de sistemas e administradores de rede. Esta suíte centraliza utilitários críticos de diagnóstico, manutenção de infraestrutura e automação de rotinas operacionais em uma interface unificada de última geração.
 
 ---
 
-## 📸 Preview do Projeto
+## 📸 Enterprise Dashboard Preview
 
 <p align="center">
   <a href="https://github.com/joaopedrosvr97-hub/Canivete-Sui-o-Python-Toolkit">
-    <img src="src/docs/interface.png" alt="Interface Principal" width="850" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <img src="src/docs/interface.png" alt="Main Interface" width="850" style="border-radius: 10px; border: 1px solid #30363d;">
   </a>
   <br>
-  <i>Interface moderna v0.4.0 com suporte a Dark Mode.</i>
+  <i><b>System Core:</b> Interface moderna baseada em CustomTkinter com suporte a temas dinâmicos.</i>
 </p>
 
 <table align="center" style="border: none;">
   <tr>
     <td align="center" style="border: none;">
       <a href="src/docs/config.png">
-        <img src="src/docs/config.png" width="400px" alt="Configurações e Manutenção" style="border-radius: 8px; transition: transform .2s;"/>
+        <img src="src/docs/config.png" width="400px" alt="OS Management" style="border-radius: 8px;"/>
       </a>
-      <br><sub><b>Ferramentas de Manutenção OS</b></sub>
+      <br><sub><b>OS Management & Maintenance</b></sub>
     </td>
     <td align="center" style="border: none;">
       <a href="src/docs/main_gui.png">
-        <img src="src/docs/main_gui.png" width="400px" alt="Estrutura de Código" style="border-radius: 8px; transition: transform .2s;"/>
+        <img src="src/docs/main_gui.png" width="400px" alt="Source Architecture" style="border-radius: 8px;"/>
       </a>
-      <br><sub><b>Arquitetura do Projeto (src-layout)</b></sub>
+      <br><sub><b>Enterprise Project Architecture (src-layout)</b></sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🆕 Novidades da Versão 0.4.0
+## 🛠️ Stack Técnica e Capacidades
 
-* **Interface Moderna:** Migração para `CustomTkinter` com navegação lateral dinâmica.
-* **Reparo de Sistema:** Botões dedicados para comandos SFC, DISM e Limpeza de Temporários.
-* **Gestão de Impressoras:** Reinício de Spooler e correção de erros de registro.
-* **Monitoramento Real-time:** Dashboard de tráfego de rede integrado.
+* **Core Engine:** Python 3.9+ com arquitetura modular.
+* **GUI Framework:** `CustomTkinter` para UI/UX acelerada por hardware.
+* **System Integration:** Hooks nativos para Win32 API e subprocessos Unix.
+* **Network Intelligence:** Monitoramento de I/O em tempo real e scan de sub-redes.
 
 ---
 
-## 🚀 Como Instalar e Rodar
+## 🆕 Release Notes - v0.4.0 (GUI Milestone)
 
-### Pré-requisitos
-* **Python 3.9+**
-* **Privilégios de Administrador** (necessário para funções de rede e sistema).
+* **Modularization:** Transição completa para o padrão `src-layout` (PEP 517/518).
+* **Maintenance Suite:** Implementação de triggers para integridade de sistema (SFC, DISM).
+* **Print Services:** Módulo especializado para gestão de Spooler e patches de registro.
+* **CI/CD Ready:** Integração com GitHub Actions para validação automatizada de pacotes.
 
-### Passo a Passo
+---
+## 📂 Release Notes - v0.4.0 (GUI Milestone)
+A estrutura segue rigorosos padrões de engenharia de software para facilitar a manutenção e escalabilidade:
+---
+
+# 🔪 Canivete Suíço - Network Toolkit (v0.4.0)
+
+<p align="center"> 
+  <img src="https://img.shields.io/badge/Status-Stable-32CD32?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/Release-v0.4.0-blue?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python"> 
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey?style=for-the-badge"> 
+  <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge"> 
+</p>
+
+O **Canivete Suíço** é uma solução modular de alto desempenho projetada para engenheiros de sistemas e administradores de rede. Esta suíte centraliza utilitários críticos de diagnóstico, manutenção de infraestrutura e automação de rotinas operacionais em uma interface unificada de última geração.
+
+---
+
+## 📸 Enterprise Dashboard Preview
+
+<p align="center">
+  <a href="https://github.com/joaopedrosvr97-hub/Canivete-Sui-o-Python-Toolkit">
+    <img src="src/docs/interface.png" alt="Main Interface" width="850" style="border-radius: 10px; border: 1px solid #30363d;">
+  </a>
+  <br>
+  <i><b>System Core:</b> Interface moderna baseada em CustomTkinter com suporte a temas dinâmicos.</i>
+</p>
+
+<table align="center" style="border: none;">
+  <tr>
+    <td align="center" style="border: none;">
+      <a href="src/docs/config.png">
+        <img src="src/docs/config.png" width="400px" alt="OS Management" style="border-radius: 8px;"/>
+      </a>
+      <br><sub><b>OS Management & Maintenance</b></sub>
+    </td>
+    <td align="center" style="border: none;">
+      <a href="src/docs/main_gui.png">
+        <img src="src/docs/main_gui.png" width="400px" alt="Source Architecture" style="border-radius: 8px;"/>
+      </a>
+      <br><sub><b>Interface v0.4.0 Dashboard</b></sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🚀 Deployment & Quick Start
+
+### Requisitos de Ambiente
+* Terminal com **Privilégios Elevados** (Run as Administrator / Sudo).
+* Interpretador Python 3.9 ou superior instalado.
+
+### Procedimento de Instalação (Windows/Linux)
+
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/joaopedrosvr97-hub/Canivete-Sui-o-Python-Toolkit.git
+# 1. Clonagem do Repositório
+git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
+# 2. Navegação para o Diretório de Build
+# Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
 cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
 
-# 2. Instale o pacote e dependências
+# 3. Instalação do Pacote em Modo Editável (Developer Mode)
 pip install -e .
 
-# 3. Execute a aplicação
-canivete gui
+# 4. Inicialização do Binário
+canivete-gui 
 
+📂 Arquitetura do Sistema (Project Blueprint)
+
+A estrutura segue o padrão **src-layout**, garantindo isolamento entre o core da aplicação e os scripts de distribuição.
+
+```text
+📦 Python-Toolkit
+ ┣ 📂 .github/workflows      # Pipelines de CI/CD (Automation)
+ ┣ 📂 docs/                  # Documentação técnica estendida
+ ┣ 📂 src/
+ ┃ ┗ 📂 canivete/            # Namespace principal do pacote
+ ┃   ┃ ┣ 📂 core/            # Business Logic Layer
+ ┃   ┃ ┃ ┣ 📜 network.py     # Diagnóstico de rede e Scans
+ ┃   ┃ ┃ ┣ 📜 system.py      # Hooks de reparo OS (SFC/DISM)
+ ┃   ┃ ┃ ┣ 📜 traffic.py     # Monitoramento I/O em tempo real
+ ┃   ┃ ┃ ┗ 📜 export.py      # Módulo de exportação de logs
+ ┃   ┃ ┣ 📂 docs/            # Assets estáticos (Images/PNG)
+ ┃   ┃ ┣ 📜 gui.py           # Presentation Layer (CustomTkinter)
+ ┃   ┃ ┣ 📜 cli.py           # Legacy Terminal Interface
+ ┃   ┃ ┗ 📜 __main__.py      # App Entry Point
+ ┣ 📜 pyproject.toml         # Packaging & Dependencies (PEP 517)
+ ┣ 📜 CHANGELOG.md           # Histórico de versões
+ ┗ 📜 LICENSE                # MIT Compliance
