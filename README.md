@@ -71,10 +71,9 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
 ---
 3. Navegação para o Diretório de Build
-Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
-cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
-
-4. Instalação do Pacote em Modo Editável (Developer Mode)
+4. Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
+5. cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
+6. Instalação do Pacote em Modo Editável (Developer Mode)
 pip install -e .
 
 # 4. Inicialização do Binário
