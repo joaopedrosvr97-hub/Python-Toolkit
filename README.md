@@ -67,13 +67,13 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 
 ### Procedimento de Instalação (Windows/Linux)
 
-# 1. Clonagem do Repositório
+1. Clonagem do Repositório
 git clone https://github.com/joaopedrosvr97-hub/Python-Toolkit.git
-# 2. Navegação para o Diretório de Build
-# Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
+2. Navegação para o Diretório de Build
+Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
 cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
 
-# 3. Instalação do Pacote em Modo Editável (Developer Mode)
+3. Instalação do Pacote em Modo Editável (Developer Mode)
 pip install -e .
 
 # 4. Inicialização do Binário
