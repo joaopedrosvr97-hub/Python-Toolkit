@@ -15,8 +15,8 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 ## 📸 Enterprise Dashboard Preview
 
 <p align="center">
-  <a href="https://github.com/joaopedrosvr97-hub/Canivete-Sui-o-Python-Toolkit">
-    <img src="src/docs/interface.png" alt="Main Interface" width="850" style="border-radius: 10px; border: 1px solid #30363d;">
+  <a href="https://github.com/joaopedrosvr97-hub/Python-Toolkit">
+    <img src="src/docs/interface_v4.png" alt="Main Interface" width="850" style="border-radius: 10px; border: 1px solid #30363d;">
   </a>
   <br>
   <i><b>System Core:</b> Interface moderna baseada em CustomTkinter com suporte a temas dinâmicos.</i>
@@ -25,14 +25,14 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 <table align="center" style="border: none;">
   <tr>
     <td align="center" style="border: none;">
-      <a href="src/docs/config.png">
-        <img src="src/docs/config.png" width="400px" alt="OS Management" style="border-radius: 8px;"/>
+      <a href="src/docs/config_v4.png">
+        <img src="src/docs/config_v4.png" width="400px" alt="OS Management" style="border-radius: 8px;"/>
       </a>
       <br><sub><b>OS Management & Maintenance</b></sub>
     </td>
     <td align="center" style="border: none;">
-      <a href="src/docs/main_gui.png">
-        <img src="src/docs/main_gui.png" width="400px" alt="Source Architecture" style="border-radius: 8px;"/>
+      <a href="src/docs/main_gui_v4.png">
+        <img src="src/docs/main_gui_v4.png" width="400px" alt="Source Architecture" style="border-radius: 8px;"/>
       </a>
       <br><sub><b>Enterprise Project Architecture (src-layout)</b></sub>
     </td>
@@ -43,7 +43,7 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 
 ## 🛠️ Stack Técnica e Capacidades
 
-* **Core Engine:** Python 3.9+ com arquitetura modular.
+* **Core Engine:** Python 3.9+ com arquitetura modular desacoplada.
 * **GUI Framework:** `CustomTkinter` para UI/UX acelerada por hardware.
 * **System Integration:** Hooks nativos para Win32 API e subprocessos Unix.
 * **Network Intelligence:** Monitoramento de I/O em tempo real e scan de sub-redes.
@@ -57,23 +57,6 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 * **Print Services:** Módulo especializado para gestão de Spooler e patches de registro.
 * **CI/CD Ready:** Integração com GitHub Actions para validação automatizada de pacotes.
 
----
-
-## 🛠️ Stack Técnica e Capacidades
-
-* **Core Engine:** Python 3.9+ com arquitetura modular.
-* **GUI Framework:** `CustomTkinter` para UI/UX acelerada por hardware.
-* **System Integration:** Hooks nativos para Win32 API e subprocessos Unix.
-* **Network Intelligence:** Monitoramento de I/O em tempo real e scan de sub-redes.
-
----
-
-## 🆕 Release Notes - v0.4.0 (GUI Milestone)
-
-* **Modularization:** Transição completa para o padrão `src-layout` (PEP 517/518).
-* **Maintenance Suite:** Implementação de triggers para integridade de sistema (SFC, DISM).
-* **Print Services:** Módulo especializado para gestão de Spooler e patches de registro.
-* **CI/CD Ready:** Integração com GitHub Actions para validação automatizada de pacotes.
 ---
 ### Procedimento de Instalação (Windows/Linux)
 
