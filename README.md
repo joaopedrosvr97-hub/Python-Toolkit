@@ -71,10 +71,9 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 * Navegação para o Diretório de Build
 * Nota: O caminho deve ser seguido rigorosamente para localizar o pyproject.toml
 * cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
-* Instalação do Pacote em Modo Editável (Developer Mode)
-pip install -e .
+* (pip install -e .) Instalação do Pacote em Modo Editável (Developer Mode).
 
-# 4. Inicialização do Binário
+# Inicialização do Binário
 canivete-gui 
 
 📂 Arquitetura do Sistema (Project Blueprint)
