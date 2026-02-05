@@ -24,7 +24,9 @@
 │   │   ├── cli.py
 │   │   └── gui.py
 │   └── docs
+│       ├── app_v4.ico
 │       ├── config.png
+│       ├── icon.ico
 │       ├── interface.png
 │       └── main_gui.png
 ├── .gitignore
@@ -34,4 +36,5 @@
 ├── LICENSE
 ├── README.md
 ├── SECURITY.md
+├── build_v4.bat
 └── pyproject.toml
