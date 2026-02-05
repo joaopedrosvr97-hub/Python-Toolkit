@@ -73,7 +73,7 @@ O **Canivete Suíço** é uma solução modular de alto desempenho projetada par
 * cd Canivete-Suico-Network-Toolkit/Python-Toolkit/Python-Toolkit
 * (pip install -e .) Instalação do Pacote em Modo Editável (Developer Mode).
 * Inicialização do Binário
-canivete-gui 
+(canivete-gui) 
 
 # 📂 Arquitetura do Sistema (Project Blueprint)
 
