@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from canivete.core.network import scan_network, flush_dns, ip_release, ip_renew, winsock_reset
 from canivete.core.traffic import monitor_traffic
-from canivete.core.system import system_info, is_admin
+from canivete.core.system import system_info, is_admin, run_windows_repair
 import subprocess
 import re
 import os
@@ -72,29 +72,19 @@ class CaniveteGUI(ctk.CTk):
         self.show_welcome()
 
     def load_icon(self):
-       
         try:
             if getattr(sys, 'frozen', False):
-                # Se for o executável .EXE
                 base_path = sys._MEIPASS
             else:
-                # Se for o script .PY
-                # Estrutura: src/canivete/gui.py -> sobe um nível para src/
                 current_dir = os.path.dirname(os.path.abspath(__file__))
                 base_path = os.path.abspath(os.path.join(current_dir, ".."))
 
-           
             icon_path = os.path.join(base_path, "docs", "app_v4.ico")
 
             if os.path.exists(icon_path):
-                
                 icon_path = os.path.normpath(icon_path)
-                
-                # Método de força bruta para CustomTkinter/Windows
                 self.wm_iconbitmap(icon_path)
                 self.iconbitmap(icon_path)
-                
-                # Pequeno truque: força o Windows a atualizar a barra de tarefas
                 self.after(200, lambda: self.iconbitmap(icon_path))
             else:
                 print(f"DEBUG: Ícone não encontrado em: {icon_path}")
@@ -147,24 +137,42 @@ class CaniveteGUI(ctk.CTk):
         scroll = ctk.CTkScrollableFrame(self.main_frame, width=600, height=400)
         scroll.pack(fill="both", expand=True, padx=20)
 
-        btns = [
+        # Botoões de Rede e Limpeza
+        ctk.CTkLabel(scroll, text="Recursos de Rede", font=("Arial", 14, "bold"), text_color="#3b8ed0").pack(pady=5)
+        btns_network = [
             ("IP Release", lambda: self.run_sys_cmd(ip_release)),
             ("IP Renew", lambda: self.run_sys_cmd(ip_renew)),
             ("Limpar Cache DNS", lambda: self.run_sys_cmd(flush_dns)),
             ("Resetar Winsock/Rede", lambda: self.run_sys_cmd(winsock_reset)),
             ("Exibir Configurações de IP", lambda: self.run_shell("ipconfig /all")),
-            ("Limpar DNS Cache (Shell)", lambda: self.run_shell("ipconfig /flushdns")),
-            ("Registrar DNS", lambda: self.run_shell("ipconfig /registerdns")),
-            ("Exibir Cache DNS", lambda: self.run_shell("ipconfig /displaydns")),
-            ("SFC /Scannow (Reparo)", lambda: self.run_shell("sfc /scannow")),
-            ("Limpar Arquivos Temp", self.clean_temp_action),
         ]
-
-        for text, cmd in btns:
+        for text, cmd in btns_network:
             ctk.CTkButton(scroll, text=text, command=cmd, width=300).pack(pady=5)
+
+        # Botões de Reparo de Sistema (Novidade v0.4.0)
+        ctk.CTkLabel(scroll, text="Reparo de Imagem Windows (DISM/SFC)", font=("Arial", 14, "bold"), text_color="#e67e22").pack(pady=(15, 5))
+        btns_repair = [
+            ("SFC /Scannow (Reparo de Arquivos)", lambda: self.execute_repair_task("sfc")),
+            ("DISM CheckHealth (Verificação Rápida)", lambda: self.execute_repair_task("dism_check")),
+            ("DISM ScanHealth (Busca Profunda)", lambda: self.execute_repair_task("dism_scan")),
+            ("DISM RestoreHealth (Reparo de Imagem)", lambda: self.execute_repair_task("dism_restore")),
+        ]
+        for text, cmd in btns_repair:
+            ctk.CTkButton(scroll, text=text, command=cmd, width=300, fg_color="#444", hover_color="#555").pack(pady=5)
+
+        ctk.CTkLabel(scroll, text="Limpeza", font=("Arial", 14, "bold"), text_color="#2ecc71").pack(pady=(15, 5))
+        ctk.CTkButton(scroll, text="Limpar Arquivos Temp", command=self.clean_temp_action, width=300).pack(pady=5)
 
         self.console = ctk.CTkTextbox(self.main_frame, width=600, height=150)
         self.console.pack(pady=10)
+
+    def execute_repair_task(self, repair_type):
+        """Executa tarefas de reparo DISM/SFC em thread para não travar a GUI"""
+        self.safe_log(f">> Iniciando tarefa: {repair_type.upper()}. Aguarde, isso pode demorar...\n")
+        def task():
+            result = run_windows_repair(repair_type)
+            self.safe_log(f"{result}\n>> Tarefa concluída.\n")
+        threading.Thread(target=task, daemon=True).start()
 
     def show_ms_tools_frame(self):
         self.clear_main_frame()
@@ -244,11 +252,14 @@ class CaniveteGUI(ctk.CTk):
     def update_netstat(self):
         for i in self.tree.get_children(): self.tree.delete(i)
         cmd = "netstat -ano" if platform.system() == "Windows" else "ss -tulpn"
-        out = subprocess.check_output(cmd, shell=True).decode("cp850")
-        for line in out.splitlines()[4:]:
-            parts = re.split(r'\s+', line.strip())
-            if len(parts) >= 4:
-                self.tree.insert("", "end", values=parts[:5])
+        try:
+            out = subprocess.check_output(cmd, shell=True).decode("cp850")
+            for line in out.splitlines()[4:]:
+                parts = re.split(r'\s+', line.strip())
+                if len(parts) >= 4:
+                    self.tree.insert("", "end", values=parts[:5])
+        except Exception as e:
+            self.safe_log(f">> Erro ao atualizar netstat: {e}\n")
 
     def show_traffic_frame(self):
         self.clear_main_frame()
@@ -290,7 +301,7 @@ class CaniveteGUI(ctk.CTk):
         messagebox.showinfo("Impressoras", "Serviço de Spooler reiniciado!")
 
     def clean_temp_action(self):
-        import shutil, os, tempfile
+        import shutil, tempfile
         temp = tempfile.gettempdir()
         for item in os.listdir(temp):
             try:
